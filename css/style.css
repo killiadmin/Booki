@@ -91,6 +91,7 @@ label{
 .barre input{
     border: 1px solid #f2f2f2;
     flex-basis: 236px;
+    overflow: auto;
 }
 
 .barre input::placeholder{
@@ -110,5 +111,23 @@ button{
     border: none;   
     padding: 16px 16px;
     cursor: pointer;
-    
+    opacity: 0.9;
+    transition: transform 200ms;
 }
+button:hover{
+    opacity:1;
+    transform: scale(1.02);
+}
+
+.fas.fa-search{
+    display: none;
+}
+
+@media (max-width: 800px){
+    .barre .search_txt{
+        display: none;
+    }
+    .fas.fa-search{
+        display: inline;
+}
+
