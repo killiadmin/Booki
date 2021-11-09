@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">    
     <meta name="viewport" content="width=device-witdh, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normelize.css">
     <script src="https://kit.fontawesome.com/32fcfa649a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>Booki</title>
 </head>
 <body>
     <div class= "bloc_page">
+                                <!--Nav_bar-->
         <header class="header">
             <nav>
-                <img src="images/logo/Booki.png" alt="logo">   
+                <img class="logo" src="images/logo/Booki.png" alt="logo">   
                 <div class="onglet">
                     <a href="#Hébergements">Hébergements</a>
                     <a href="#Activités">Activités</a>
                 </div>
             </nav>
         </header>
-        <!--Main-->
-        <main>
+                                <!--Main-->
+        <main class="master">
             <section class="top_main">
                 <div class="title">
                     <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
                 </div>
-                <!--Searchbar-->               
+                                <!--Searchbar-->               
                 <div class="searchbar_filtre">
                     <form method="post" action="booki.php">
                         <div class="barre">
                             <label for="map">
-                                <i class="fas fa-map-marker-alt "></i>
+                                <i class="fas fa-map-marker-alt"></i>
                             </label>
                             <input name="SearchBar" id="Place" type="search" placeholder="Marseille, France" />
-                            <input class="rechercher" type="submit" value="Rechercher">
-                            <button class="glass">
+                            <button>Rechercher</button>
+                           <!-- <button class="glass">
                                 <i class="fas fa-search" aria-hidden="true"></i>
-                            </button>
+                            </button>-->
                         </div>                                                
                     </form>
                 <section class="all_filtre"> 
