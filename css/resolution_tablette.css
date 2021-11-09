@@ -1,0 +1,15 @@
+*
+{
+    color: chartreuse;
+    background-color: wheat;
+}
+
+.container
+{
+    width: auto;
+    margin: auto;
+}
+nav {
+    width: auto;
+    text-align: right;
+}

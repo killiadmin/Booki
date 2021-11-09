@@ -1,0 +1,44 @@
+*
+{
+    color: darkblue;
+    background-color: rgb(240, 142, 142);
+}
+/*header*/
+    .container
+
+{
+  margin:0;
+  padding:0;
+}
+
+header
+{
+display:flex;
+flex-wrap:wrap;
+}
+nav
+{
+order:3;
+flex:1;
+} 
+nav ul a:hover {
+color: inherit;
+}
+nav ul li {
+padding-top: 37px;
+padding-bottom: 15px;
+margin-right: 0;
+flex-basis:50%;
+text-align: center;
+border-top: none;
+color:#0065fc;
+}
+nav ul li:hover {
+  border-top: none;
+  border-bottom-color: #0065fc;
+}
+
+#logo
+{
+flex: auto;
+}
