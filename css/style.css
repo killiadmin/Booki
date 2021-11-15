@@ -13,7 +13,7 @@ a
     text-decoration: none;
     
 }
-        /*Nav_bar*/
+            /*Nav_bar*/
 nav
 {
     display: flex;
@@ -45,8 +45,16 @@ nav a
     display: flex;
 }
 
-@media(max-width:800px)
+@media(max-width:1280px)
 {
+    nav img
+{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    ;
+} 
+
     .onglet{
         order: 1;
         flex-basis: 100%;
@@ -65,14 +73,14 @@ nav a
 
 }
 
-        /*Main*/
+            /*Main*/
 
 .master
 {
     padding: 0 32px;
 }
 
-        /*Search_bar*/
+            /*Search_bar*/
 
 .barre
 {
@@ -120,7 +128,7 @@ button:hover{
     display: none;
 }
 
-@media (max-width: 800px){
+@media (max-width: 1280px){
     .barre .search_txt{
         display: none;
     }
@@ -130,7 +138,7 @@ button:hover{
 
 }
 
-        /*Filtre*/
+            /*Filtre*/
 
 .logo_filtre i{
     color: #0065fc;
@@ -174,7 +182,7 @@ button:hover{
     transition: all 200ms;
 }
 
-        /*Info*/
+            /*Info*/
 
 .info{
     display: flex;
@@ -191,3 +199,263 @@ button:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+            /*Structure_Screen_Hebergement*/
+
+.body_main{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 65px;
+}
+
+.body_main > div{
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    padding: 16px;
+
+}
+
+.body_main .all_hebergement{
+    flex-basis: 76%;
+}
+
+.body_main .famous_all_hebergement{
+    flex-basis: 25%;
+}
+
+ /*.bloc_master_hebergement a{
+     align-items: flex-start;
+ }*/
+
+
+.all_hebergement .info_supp{
+    font-weight: bold;
+}
+
+@media (max-width: 1280px){
+    .body_main{
+        flex-direction: column;
+    }
+
+    .famous_all_hebergement{
+        order: -1;
+    }
+}
+
+            /*List_hebergement*/
+
+.bloc_master_hebergement {
+    
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.bloc_master_hebergement div{   
+    flex-basis: 25%;
+}
+
+
+            /*List_famous_hebergement*/
+
+.body_main .famous_flex{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.famous_all_hebergement h2{
+    /*flex-basis: 100%;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.body_main h2{
+  margin-top: 16px;
+}
+
+@media (max-width:1280px){
+
+    .body_main .famous_flex{
+        flex-direction: row;
+    }
+}
+
+            /*Vignette_hebergement*/
+
+.blue{
+    color: #0065fc;
+}
+
+.grey{
+    color:#bdbdbd;
+}
+
+.bloc_hebergement{
+    padding: 8px;
+    box-shadow: 0 0 16px #0000002e;
+    background-color: white;
+    border-radius: 16px;
+    /*flex-grow: 1;*/
+    
+}
+
+.bloc_hebergement img{
+    border-radius: 16px 16px 0 0;
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    /*object-position: top;*/
+}
+
+
+.bloc_hebergement p,
+.bloc_hebergement h3,
+.famous_info_vignette p,
+.famous_info_vignette h3 {
+    margin: 8px;
+}
+
+            /*Vignette_famous_hebergement*/
+
+.famous_all_hebergement{
+    display: flex;
+    flex-direction: column;
+}
+
+.famous_flex{
+    flex-basis: 100%;
+    justify-content: space-evenly;
+}
+
+.bloc_hebergement_famous{
+    display: flex;
+    padding: 8px;
+    box-shadow: 0 0 16px #0000002e;
+    background-color: white;
+    border-radius: 16px;
+    min-width: 240px;
+    max-height: 160px;
+    
+}   
+
+.bloc_hebergement_famous img{
+    border-radius: 16px 0 0 16px;
+    /*height: auto;*/
+    /*height: 128px;*/
+    width: 40%;
+    margin-right: 8px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.famous_info_vignette{
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.famous_info_vignette .star_famous {
+    margin-top: auto;
+}
+
+            /* Mobile_version*/
+
+@media (max-width:850px){
+    .bloc_master_hebergement{
+        flex-direction: column;
+    }
+}
+
+            /* ACTIVITES A MARSEILLE ! */
+
+.activites_list{
+    display: grid;
+   /* margin-bottom: 20vh;*/
+    grid-template-columns: repeat(auto-fit, minmax(160px, 500px));
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 32px;
+    grid-auto-rows: minmax(160px, auto);
+    justify-content: center;
+
+}
+
+.activites_list > *{
+    border-radius: 16px;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transition: all 200ms ;
+}
+
+.activites_list > div:hover{
+    transform: scale(1.02);
+}
+
+.activites_list .large{
+    height: 480px;
+
+}
+
+.port{
+    background-image: url(images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+    grid-row: 1 / -1;
+}
+
+.fort{
+    background-image: url(images/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+}
+
+.frioul{
+    background-image: url(images/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg) ;
+    grid-column: 2 / 3;
+    grid-row: 4 / -1;
+}
+
+.calanques{
+    background-image: url(images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+    grid-column: 3 / 4;
+    grid-row: 1 / -1;
+}
+
+.notre_dame{
+    background-image: url(images/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+    grid-row: 1 / 3;
+    grid-column: 4 / 4;
+}
+
+.longchamp{
+    background-image: url(images/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+    grid-row: 3 / -1;
+    grid-column: 4 / 4;
+}
+
+
+.activites_list h3{
+    background-color: #ffff;
+    margin-top: auto;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 15px;
+    border-radius: 0 0 16px 16px;
+}
+
+@media (max-width: 1280px){
+    .activites_list > *{
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-template-rows: unset;
+        background-color: lightpink;
+        height: 480px;
+    }
+}
