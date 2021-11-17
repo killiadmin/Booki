@@ -7,15 +7,15 @@
     font-family: "Raleway", "sans-serif", "serif"
 }
 
-html{
+html
+{
     scroll-behavior: smooth;
 }
 
 .onglet a
 {
     color: inherit;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
             /*Nav_bar*/
 nav
@@ -51,34 +51,6 @@ nav a
     display: flex;
 }
 
-@media(max-width:1280px)
-{
-    nav img
-{
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    ;
-} 
-
-    .onglet{
-        order: 1;
-        flex-basis: 100%;
-    }
-    
-    .onglet a{
-        flex-basis: 50%;
-        text-align: center;
-        border-bottom: 3px solid #f2f2f2;
-    }
-
-    nav a:hover{
-        border-bottom-color:#0065fc;
-        border-top-color: transparent;
-    }
-
-}
-
             /*Main*/
 
 .master 
@@ -95,27 +67,40 @@ nav a
     display: flex;
 }
 
-label{
+.point_marker
+{
     padding: 16px 19px;
     background-color: #f2f2f2;
     border-radius: 16px 0 0 16px;
+    cursor: pointer;
 }
 
-.barre input{
+.point_marker:hover
+{
+    background-color: #d8d8d8;
+}
+
+.point_marker:active
+{
+    transform: scale(1.2);
+}
+
+.barre input
+{
     border: 1px solid #f2f2f2;
     flex-basis: 236px;
     overflow: auto;
 }
 
-.barre input::placeholder{
+.barre input::placeholder
+{
     font-weight: bold;
     color: #000000;
     padding-left: 16px;
-    
-    
 }
 
-button{
+button
+{
     background-color: #0065fc;
     color: #ffff;
     font-size: 19px;
@@ -127,28 +112,27 @@ button{
     opacity: 0.9;
     transition: transform 200ms;
 }
-button:hover{
+
+button:hover
+{
     opacity:1;
     transform: scale(1.02);
 }
 
-.fas.fa-search{
+button:active
+{
+    transform: scale(1.2);
+}
+
+.fas.fa-search
+{
     display: none;
-}
-
-@media (max-width: 1280px){
-    .barre .search_txt{
-        display: none;
-    }
-    .fas.fa-search{
-        display: inline;
-}
-
 }
 
             /*Filtre*/
 
-.logo_filtre i{
+.logo_filtre i
+{
     color: #0065fc;
     background-color: #deebff;
     width: 48px;
@@ -161,7 +145,8 @@ button:hover{
 
 }
 
-.category_filtre{
+.category_filtre
+{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -169,20 +154,26 @@ button:hover{
     margin: 24px 0 24px 0;
 }
 
-.logo_filtre span{
+.logo_filtre span
+{
     font-weight: bold;
     padding: 0 19px;
-
 }
 
-.logo_filtre:hover{
+.logo_filtre:hover
+{
     background-color: #f2f2f2;
     cursor: pointer;
     transform: scale(1.02);
-
 }
 
-.logo_filtre{
+.logo_filtre:active
+{
+    transform: scale(1.2);
+}
+
+.logo_filtre
+{
     border: 2px solid lightgray;
     border-radius: 32px;
     display: flex;
@@ -192,13 +183,15 @@ button:hover{
 
             /*Info*/
 
-.info{
+.info
+{
     display: flex;
     align-items: center;
     gap: 32px;
 }
 
-.info i{
+.info i
+{
     color: #0065fc;
     border: 1px solid lightgray;
     width: 32px;
@@ -211,33 +204,32 @@ button:hover{
 
             /*Structure_Screen_Hebergement*/
 
-.body_main{
+.body_main
+{
     display: flex;
     gap: 16px;
     margin-bottom: 65px;
 }
 
-.body_main > div{
+.body_main > div
+{
     background-color: #f2f2f2;
     border-radius: 16px;
     padding: 16px;
-
 }
 
-.body_main .all_hebergement{
-    flex-basis: 76%;
+.body_main .all_hebergement
+{
+    flex-basis: 70%;
 }
 
-.body_main .famous_all_hebergement{
-    flex-basis: 25%;
+.body_main .famous_all_hebergement
+{
+    flex-basis: 30%;
 }
 
- /*.bloc_master_hebergement a{
-     align-items: flex-start;
- }*/
-
-
-.all_hebergement .info_supp{
+.all_hebergement .info_supp
+{
     font-weight: bold;
     color: #000000;
     text-decoration: none;
@@ -247,164 +239,164 @@ button:hover{
     text-decoration: underline;
 }
 
-@media (max-width: 1280px){
-    .body_main{
-        flex-direction: column;
-    }
-
-    .famous_all_hebergement{
-        order: -1;
-    }
-}
-
             /*List_hebergement*/
 
-.bloc_master_hebergement {
-    
+.bloc_master_hebergement 
+{  
     background-color: #f2f2f2;
     border-radius: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 16px;
+    gap: 32px;
     margin-bottom: 16px;
 }
 
-.bloc_master_hebergement div{   
+.bloc_master_hebergement div
+{   
     flex-basis: 25%;
 }
 
-
             /*List_famous_hebergement*/
 
-.body_main .famous_flex{
+.body_main .famous_flex
+{
     display: flex;
     flex-direction: column;
-    gap: 30px;
     flex-wrap: wrap;
 }
 
-.famous_all_hebergement h2{
-    /*flex-basis: 100%;*/
+.famous_all_hebergement h2
+{
     display: flex;
     justify-content: space-between;
 }
 
-.body_main h2{
+.body_main h2
+{
   margin-top: 16px;
-}
-
-@media (max-width:1280px){
-
-    .body_main .famous_flex{
-        flex-direction: row;
-    }
 }
 
             /*Vignette_hebergement*/
 
-.blue{
+.blue
+{
     color: #0065fc;
 }
 
-.grey{
+.grey
+{
     color:#bdbdbd;
 }
 
-.bloc_hebergement{
+.bloc_hebergement
+{
     padding: 8px;
     box-shadow: 0 0 16px #0000002e;
     background-color: white;
     border-radius: 16px;
-    /*flex-grow: 1;*/
+    flex-grow: 1;
     transition: all 200ms ;
     cursor: pointer;
 }
 
-.bloc_hebergement:hover{
-    transform: scale(1.05);
-    
+.bloc_hebergement:hover
+{
+    transform: scale(1.05);   
 }
 
-.bloc_hebergement img{
+.bloc_hebergement:active:hover
+{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+}
+
+.bloc_hebergement img
+{
     border-radius: 16px 16px 0 0;
     height: 160px;
     width: 100%;
     object-fit: cover;
-    /*object-position: top;*/
 }
 
 
 .bloc_hebergement p,
 .bloc_hebergement h3,
 .famous_info_vignette p,
-.famous_info_vignette h3 {
+.famous_info_vignette h3 
+{
     margin: 8px;
 }
 
             /*Vignette_famous_hebergement*/
 
-.famous_all_hebergement{
+.famous_all_hebergement
+{
     display: flex;
     flex-direction: column;
 }
 
-.famous_flex{
+.famous_flex
+{
     flex-basis: 100%;
     justify-content: space-evenly;
 }
 
-.bloc_hebergement_famous{
+.bloc_hebergement_famous
+{
     display: flex;
+    flex-direction: row;
+    min-width: 100%;
     padding: 8px;
     box-shadow: 0 0 16px #0000002e;
     background-color: white;
     border-radius: 16px;
-    min-width: 240px;
-    max-height: 160px;
+    max-height: 130px;
+    min-height: 130px;
     transition: all 200ms;
     cursor: pointer;
-    
 }
 
-.bloc_hebergement_famous:hover{
+.bloc_hebergement_famous:hover
+{
     transform: scale(1.05);
 }
 
-.bloc_hebergement_famous img{
-    border-radius: 16px 0 0 16px;
-    /*height: auto;*/
-    /*height: 128px;*/
-    width: 40%;
-    margin-right: 8px;
-    object-fit: cover;
-    object-position: center;
-    
+.bloc_hebergement_famous:active:hover
+{
+    padding: 0;
+    margin: 0;
+    opacity: 1;
 }
 
-.famous_info_vignette{
+.famous_screen
+{
+    border-radius: 16px 0 0 16px;
+    height: 100%;
+    width: 40%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.famous_info_vignette
+{
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
-.famous_info_vignette .star_famous {
+.famous_info_vignette .star_famous 
+{
     margin-top: auto;
-}
-
-            /* Mobile_version*/
-
-@media (max-width:850px){
-    .bloc_master_hebergement{
-        flex-direction: column;
-    }
 }
 
             /* ACTIVITES A MARSEILLE ! */
 
-.activites_list{
+.activites_list
+{
     display: grid;
-   /* margin-bottom: 20vh;*/
     grid-template-columns: repeat(auto-fit, minmax(160px, 500px));
     grid-template-rows: repeat(5, 1fr);
     grid-gap: 32px;
@@ -413,7 +405,8 @@ button:hover{
 
 }
 
-.activites_list > *{
+.activites_list > *
+{
     border-radius: 16px;
     background-size: cover;
     display: flex;
@@ -422,56 +415,70 @@ button:hover{
     transition: all 200ms ;
 }
 
-.activites_list > div:hover{
+.activites_list > div:hover
+{
     transform: scale(1.02);
 }
 
-.act_mars{
+.act_mars
+{
     cursor: pointer;
 }
 
-.activites_list .large{
-    height: 480px;
-
+.activites_list >div:active
+{
+    transform: scale(1.2);
 }
 
-.port{
+.activites_list .large
+{
+    height: 480px;
+}
+
+.port
+{
     background-image: url(images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
     grid-row: 1 / -1;
 }
 
-.fort{
+.fort
+{
     background-image: url(images/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
     grid-row: 1 / 4;
     grid-column: 2 / 3;
 }
 
-.frioul{
+.frioul
+{
     background-image: url(images/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg) ;
     grid-column: 2 / 3;
     grid-row: 4 / -1;
 }
 
-.calanques{
+.calanques
+{
     background-image: url(images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
     grid-column: 3 / 4;
     grid-row: 1 / -1;
 }
 
-.notre_dame{
+.notre_dame
+{
     background-image: url(images/florian-wehde-xW9e8gdotxI-unsplash.jpg);
     grid-row: 1 / 3;
     grid-column: 4 / 4;
 }
 
-.longchamp{
+.longchamp
+{
     background-image: url(images/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
     grid-row: 3 / -1;
     grid-column: 4 / 4;
 }
 
 
-.activites_list h3{
+.activites_list h3
+{
     background-color: #ffff;
     margin-top: auto;
     margin-bottom: 0;
@@ -480,52 +487,216 @@ button:hover{
     border-radius: 0 0 16px 16px;
 }
 
-@media (max-width: 1280px){
-    .activites_list{
-        grid-template-rows: repeat(auto-fit, 480px);
-    }
-    .activites_list > *{
-        grid-column: span 1;
-        grid-row: span 1;
-        grid-template-rows: unset;
-        height: 480px;
-    }
-}
-
             /*Footer*/
 
-footer{
+footer
+{
     background-color: #f2f2f2;
     width: 100%;
     display: flex;
     gap: 380px;
     margin-top: 60px;
-    font-size: medium
+    font-size: medium;
 }
 
-footer p{
+footer p
+{
     cursor: pointer;
 }
 
-footer p:hover{
+footer p:active
+{
+    color: #0065fc;
+}
+
+footer p:hover
+{
     text-decoration: underline;
 }
 
-.bloc_footer{
+.bloc_footer
+{
     margin: 36px;
 }
 
-@media (max-width: 1280px){
-    footer{
-        gap: 200px;
+
+/* ~~~~~~~~~~~~~~~~~~~~   MEDIA RESPONSIVE   ~~~~~~~~~~~~~~~~~~ */
+
+/* NAV_BAR */
+
+@media(max-width:1280px)
+{
+    nav img
+    {
+    margin: auto;
+    align-items: center;
+    justify-content: center;    
+    } 
+    .onglet
+    {
+        order: 1;
+        flex-basis: 100%;
+    }
+    
+    .onglet a
+    {
+        flex-basis: 50%;
+        text-align: center;
+        border-bottom: 3px solid #f2f2f2;
+    }
+
+    nav a:hover
+    {
+        border-bottom-color:#0065fc;
+        border-top-color: transparent;
+    }
+
+}
+
+/* SEARCH_BAR */
+
+@media (max-width: 1280px)
+{
+    .barre .search_txt
+    {
+        display: none;
+    }
+    .fas.fa-search
+    {
+        display: inline;
+    }
+}
+
+/* STRUCTURE_SCREEN_HEBERGEMENT */
+
+@media (max-width: 1280px)
+{
+    .body_main
+    {
+        flex-direction: column;
+    }
+
+    .famous_all_hebergement
+    {
+        order: -1;
+    }
+}
+
+/* LIST_FAMOUS_HEBERGEMENT */
+
+/* @media (max-width:992px)
+{
+    .body_main .famous_flex
+    {
+        gap: 12px;
+    }
+} */
+
+@media (max-width:1280px)
+{
+
+    .body_main .famous_flex
+    {
+        flex-direction: row;
+        gap: 12px;
+    }
+}
+
+/* Mobile_version */
+
+@media (max-width: 411px){
+    .bloc_hebergement_famous
+    {
+        max-height: 144px;
+    }
+}
+
+@media (max-width: 399px){
+    .bloc_hebergement_famous
+    {
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 335px){
+    .bloc_hebergement_famous
+    {
+        max-height: 280px;
+    }
+}
+
+@media (max-width:850px)
+{
+    .bloc_master_hebergement
+    {
+        flex-direction: column;
+    }
+    .body_main .all_hebergement, .bloc_master_hebergement
+    {
+        background-color: #ffff;
+    }    
+}
+
+/* ACTIVITES A MARSEILLE */
+
+@media (max-width: 1280px)
+{
+    .activites_list > *
+    {
+        grid-column: span 1;
+        grid-row: span 1;
+        grid-template-rows: repeat(3,1fr);
+        height: 480px;
+
+    }
+}
+
+@media (max-width: 992px)
+
+{
+    .activites_list .large
+    {
+        height: 270px;
+    }
+    .activites_list > *
+    {
+        height: 270px;
+    } 
+}
+
+@media (max-width: 768px)
+{
+    .activites_list .large
+    {
+        height: 270px;
+    }
+    .activites_list > *
+    {
+        height: 270px;
+    } 
+}
+
+/* FOOTER */
+
+@media (max-width: 1280px)
+{
+    footer
+    {
+        gap: 130px;
         justify-content: space-evenly;
     }
 }
 
-@media (max-width: 768px){
-    footer{
+@media (max-width: 768px)
+{
+    footer
+    {
         flex-direction: column;
         justify-content: center;
-        gap: 20px;
+        gap: 0;
+    }
+    .bloc_footer 
+    {
+        margin: 15px;
     }
 }
