@@ -582,16 +582,6 @@ footer p:hover
     }
 }
 
-/* LIST_FAMOUS_HEBERGEMENT */
-
-/* @media (max-width:992px)
-{
-    .body_main .famous_flex
-    {
-        gap: 12px;
-    }
-} */
-
 @media (max-width:1280px)
 {
 
@@ -604,21 +594,29 @@ footer p:hover
 
 /* Mobile_version */
 
-@media (max-width: 411px){
+@media (max-width: 411px)
+{
     .bloc_hebergement_famous
     {
         max-height: 144px;
     }
 }
 
-@media (max-width: 399px){
+@media (max-width: 399px)
+{
     .bloc_hebergement_famous
     {
         max-height: 180px;
     }
+
+    nav a
+    {
+        padding: 21px;
+    }
 }
 
-@media (max-width: 335px){
+@media (max-width: 335px)
+{
     .bloc_hebergement_famous
     {
         max-height: 280px;
@@ -648,6 +646,11 @@ footer p:hover
         grid-template-rows: repeat(3,1fr);
         height: 480px;
 
+    }
+
+    .activites_list
+    {
+        grid-template-rows: repeat(3, 1fr);
     }
 }
 
