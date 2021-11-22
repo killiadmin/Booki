@@ -69,7 +69,10 @@ nav a
 
 .point_marker
 {
-    padding: 16px 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
     background-color: #f2f2f2;
     border-radius: 16px 0 0 16px;
     cursor: pointer;
@@ -194,8 +197,8 @@ button:active
 {
     color: #0065fc;
     border: 1px solid lightgray;
-    width: 32px;
-    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -211,7 +214,9 @@ button:active
     margin-bottom: 65px;
 }
 
-.body_main > div
+.body_main > div,
+.famous_all_hebergement,
+.all_hebergement
 {
     background-color: #f2f2f2;
     border-radius: 16px;
@@ -235,7 +240,8 @@ button:active
     text-decoration: none;
 }
 
-.all_hebergement .info_supp:hover{
+.all_hebergement .info_supp:hover
+{
     text-decoration: underline;
 }
 
@@ -320,13 +326,16 @@ button:active
     object-fit: cover;
 }
 
-
 .bloc_hebergement p,
-.bloc_hebergement h3,
-.famous_info_vignette p,
-.famous_info_vignette h3 
+.bloc_hebergement h3
 {
     margin: 8px;
+}
+
+.famous_info_vignette p,
+.famous_info_vignette h3
+{
+    margin: 0;
 }
 
             /*Vignette_famous_hebergement*/
@@ -385,6 +394,7 @@ button:active
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5px 0px 5px 10px;
 }
 
 .famous_info_vignette .star_famous 
@@ -405,7 +415,7 @@ button:active
 
 }
 
-.activites_list > *
+.activites_list .act_mars
 {
     border-radius: 16px;
     background-size: cover;
@@ -425,7 +435,7 @@ button:active
     cursor: pointer;
 }
 
-.activites_list >div:active
+.activites_list > div:active
 {
     transform: scale(1.2);
 }
@@ -494,9 +504,10 @@ footer
     background-color: #f2f2f2;
     width: 100%;
     display: flex;
-    gap: 380px;
+    justify-content: space-around;
     margin-top: 60px;
     font-size: medium;
+    
 }
 
 footer p
@@ -517,6 +528,7 @@ footer p:hover
 .bloc_footer
 {
     margin: 36px;
+    margin-left: -200px;
 }
 
 
@@ -550,7 +562,6 @@ footer p:hover
         border-bottom-color:#0065fc;
         border-top-color: transparent;
     }
-
 }
 
 /* SEARCH_BAR */
@@ -564,6 +575,11 @@ footer p:hover
     .fas.fa-search
     {
         display: inline;
+    }
+    .barre button
+    {
+        border-radius: 16px 16px 16px 16px;
+        margin-left: -13px;
     }
 }
 
@@ -594,11 +610,11 @@ footer p:hover
 
 /* Mobile_version */
 
-@media (max-width: 411px)
+@media (max-width: 335px)
 {
     .bloc_hebergement_famous
     {
-        max-height: 144px;
+        max-height: 280px;
     }
 }
 
@@ -615,11 +631,16 @@ footer p:hover
     }
 }
 
-@media (max-width: 335px)
+@media (max-width: 411px)
 {
     .bloc_hebergement_famous
     {
-        max-height: 280px;
+        max-height: 144px;
+    }
+
+    .famous_screen
+    {
+        width: 28%;
     }
 }
 
@@ -639,15 +660,13 @@ footer p:hover
 
 @media (max-width: 1280px)
 {
-    .activites_list > *
+    .activites_list .act_mars
     {
         grid-column: span 1;
         grid-row: span 1;
         grid-template-rows: repeat(3,1fr);
         height: 480px;
-
     }
-
     .activites_list
     {
         grid-template-rows: repeat(3, 1fr);
@@ -655,13 +674,12 @@ footer p:hover
 }
 
 @media (max-width: 992px)
-
 {
     .activites_list .large
     {
         height: 270px;
     }
-    .activites_list > *
+    .activites_list .act_mars
     {
         height: 270px;
     } 
@@ -673,7 +691,7 @@ footer p:hover
     {
         height: 270px;
     }
-    .activites_list > *
+    .activites_list .act_mars
     {
         height: 270px;
     } 
@@ -688,9 +706,13 @@ footer p:hover
         gap: 130px;
         justify-content: space-evenly;
     }
+    .bloc_footer
+    {
+        margin-left: 0px;
+    }
 }
 
-@media (max-width: 768px)
+@media (max-width: 880px)
 {
     footer
     {
@@ -700,6 +722,6 @@ footer p:hover
     }
     .bloc_footer 
     {
-        margin: 15px;
+        margin: 5px 0px 0px 30px;
     }
 }
