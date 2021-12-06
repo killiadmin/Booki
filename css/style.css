@@ -4,12 +4,17 @@
 {
     box-sizing: border-box;
     list-style-type: none;
-    font-family: "Raleway", "sans-serif", "serif"
+    font-family: "Raleway", "sans-serif", "serif";
 }
 
 html
 {
     scroll-behavior: smooth;
+}
+
+html a{
+    color: #000000;
+    text-decoration: none;
 }
 
 .onglet a
@@ -166,7 +171,6 @@ button:active
 .logo_filtre:hover
 {
     background-color: #f2f2f2;
-    cursor: pointer;
     transform: scale(1.02);
 }
 
@@ -182,6 +186,8 @@ button:active
     display: flex;
     align-items: center;
     transition: all 200ms;
+    color: #000000;
+
 }
 
             /*Info*/
@@ -258,7 +264,7 @@ button:active
     margin-bottom: 16px;
 }
 
-.bloc_master_hebergement div
+.bloc_master_hebergement a
 {   
     flex-basis: 25%;
 }
@@ -303,7 +309,7 @@ button:active
     border-radius: 16px;
     flex-grow: 1;
     transition: all 200ms ;
-    cursor: pointer;
+
 }
 
 .bloc_hebergement:hover
@@ -364,7 +370,6 @@ button:active
     max-height: 130px;
     min-height: 130px;
     transition: all 200ms;
-    cursor: pointer;
 }
 
 .bloc_hebergement_famous:hover
@@ -425,17 +430,12 @@ button:active
     transition: all 200ms ;
 }
 
-.activites_list > div:hover
+.activites_list a:hover
 {
     transform: scale(1.02);
 }
 
-.act_mars
-{
-    cursor: pointer;
-}
-
-.activites_list > div:active
+.activites_list a:active
 {
     transform: scale(1.2);
 }
@@ -445,41 +445,41 @@ button:active
     height: 480px;
 }
 
-.port
+.big_left
 {
     background-image: url(images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
     grid-row: 1 / -1;
 }
 
-.fort
+.medium_left
 {
     background-image: url(images/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
     grid-row: 1 / 4;
     grid-column: 2 / 3;
 }
 
-.frioul
+.small_left
 {
     background-image: url(images/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg) ;
     grid-column: 2 / 3;
     grid-row: 4 / -1;
 }
 
-.calanques
+.big_right
 {
     background-image: url(images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
     grid-column: 3 / 4;
     grid-row: 1 / -1;
 }
 
-.notre_dame
+.small_right
 {
     background-image: url(images/florian-wehde-xW9e8gdotxI-unsplash.jpg);
     grid-row: 1 / 3;
     grid-column: 4 / 4;
 }
 
-.longchamp
+.medium_right
 {
     background-image: url(images/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
     grid-row: 3 / -1;
@@ -510,17 +510,12 @@ footer
     
 }
 
-footer p
-{
-    cursor: pointer;
-}
-
-footer p:active
+footer a:active
 {
     color: #0065fc;
 }
 
-footer p:hover
+footer a:hover
 {
     text-decoration: underline;
 }
@@ -529,6 +524,9 @@ footer p:hover
 {
     margin: 36px;
     margin-left: -200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 
